@@ -32,7 +32,7 @@ Simple usage:
 This library can come in handy if you want to process huge xml files reading straight from the archive without uncompressing it and works nicely together with `Nokogiri::XML::Reader` and can be used as follows:
 
     archive = ArchiveIO.open("archive.7z")
-    archive.find("*.xml") do |cursor|
+    archive.select("*.xml") do |cursor|
       Nokogiri::XML::Reader(cursor) do |xml_node|
         # your custom xml processing logic goes here
       end
