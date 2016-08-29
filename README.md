@@ -33,7 +33,7 @@ This library can come in handy if you want to process huge xml files reading str
 
     archive = ArchiveIO.open("archive.7z")
     archive.select("*.xml") do |cursor|
-      Nokogiri::XML::Reader(cursor) do |xml_node|
+      Nokogiri::XML::Reader(cursor).each do |xml_node|
         # your custom xml processing logic goes here
       end
     end
