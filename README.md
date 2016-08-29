@@ -1,4 +1,6 @@
-# ArchiveIo
+# ArchiveIO
+[![Gem Version](https://badge.fury.io/rb/archive_io.svg)](https://badge.fury.io/rb/archive_io)
+
 
 Library which can traverse archived file (using [libarchive](http://www.libarchive.org/) under the hood) and yields IO like object on each file entry inside it for further streamline processing.
 
