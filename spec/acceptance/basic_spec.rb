@@ -21,10 +21,10 @@ RSpec.describe ArchiveIO do
 
   context "with unarchived file" do
     it "raises error" do
-      archive = ArchiveIO.open("spec/fixtures/unarchived_file.txt")
-
-      expect { archive.each { |file| file.pathname } }
-        .to raise_error(ArchiveIO::LibArchive::Error, "Unrecognized archive format")
+      expect {
+        archive = ArchiveIO.open("spec/fixtures/unarchived_file.txt")
+        archive.each { |file| file.pathname }
+      }.to raise_error(ArchiveIO::LibArchive::Error, "Unrecognized archive format")
     end
   end
 end
