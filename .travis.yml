@@ -3,5 +3,6 @@ rvm:
   - 2.3.1
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y libarchive13
+  - sudo apt-get install -y libarchive-dev
+cache: bundler
 script: bundle exec rspec
