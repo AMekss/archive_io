@@ -7,7 +7,7 @@ module ArchiveIO
     OK = 0
     EOF = 1
 
-    ffi_lib ["archive", "libarchive.so.2"]
+    ffi_lib ["archive", "libarchive.so.2", "libarchive.so.13"]
 
     attach_function :archive_version_string, [], :string
     attach_function :archive_read_open_filename, [:pointer, :string, :size_t], :int
